@@ -1,7 +1,19 @@
 # cloud-itonami-carrier
 
 Starlink Direct-to-Cell を前提にした携帯キャリアサービスの**運用** repo
-(cloud-itonami / itonami.cloud)。ADR-2609011500 が正本。
+(cloud-itonami / itonami.cloud)。
+
+| 何の正本か | どこ |
+|---|---|
+| west 登録 | superproject `90-docs/adr/2800010200-cloud-itonami-carrier-west-registration.edn` |
+| この repo の設計判断 | [docs/adr/0001](docs/adr/0001-the-source-of-truth-this-readme-names-does-not-exist.md) |
+| operator の入口 | [docs/operator-quickstart.md](docs/operator-quickstart.md) |
+
+⚠ **この節は 2026-09-05 まで「ADR-2609011500 が正本」と書いていた。その ADR は
+木のどこにも存在しない**(`git grep -l 2609011500 origin/main` → 0 件)。実在する
+superproject ADR は west 登録の 1 本だけで、それ自身が「登録のみを記録する」と
+明記している —— つまり下に書かれた設計判断を記録した ADR は、**まだ無い**。
+経緯と、塞いでいない穴 3 つは ADR-0001 に測定として在る。
 
 ## この repo が担うもの
 
