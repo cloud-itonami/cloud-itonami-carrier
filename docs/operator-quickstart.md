@@ -9,7 +9,7 @@
 
 必要なもの: **`clojure` CLI（JVM）だけ。** node も nbb も要らない。依存は
 `deps.edn` の 3 つ（clojure / babashka.cli / cognitect test-runner）で、初回の
-`clojure -M:test` が自分で取りに行く。
+`kbb -M:test` が自分で取りに行く。
 
 ## 1. 取得する
 
@@ -29,7 +29,7 @@ west workspace の中なら `west update --fetch smart cloud-itonami-carrier` �
 ## 2. テストを走らせる（network は初回の依存取得だけ）
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
 
 こうなれば緑:
@@ -67,7 +67,7 @@ quickstart が自分でそれを起こさないようにしてある。
 ## 3. governor を手で撃つ（30 秒）
 
 ```bash
-clojure -M -e '(require (quote [carrier.service.operation :as op]))
+kbb -M -e '(require (quote [carrier.service.operation :as op]))
 (println "observe :" (:proposal/status (op/govern (op/propose :network/observe {}))))
 (println "propose :" (:proposal/status (op/govern (op/propose :subscriber/bill {}))))
 (println "swap    :" (try (op/propose :ownership/transfer {})
@@ -121,7 +121,7 @@ ls <workspace>/orgs/cloud-itonami/cloud-itonami-app/docs/adr/ | grep 0084
    テストは `blueprint.edn` を読まない（op 集合を自分の中に literal で持つ）。
    **片方だけ編集すると、両方が緑のまま食い違う。**
 2. **mutation runner の緑。** superproject で
-   `nbb scripts/maturity-loop/run.cljs --only cloud-itonami-carrier` を回すと
+   `kbb --backend sci scripts/maturity-loop/run.cljk --only cloud-itonami-carrier` を回すと
    `0 suite` / `噛まない=0` / **exit 0** が返るが、これは
    「登録が 1 件も無い」の意味である。**「全部噛んだ」と同じ形をしている。**
    この緑をテスト品質の証拠に使わない。

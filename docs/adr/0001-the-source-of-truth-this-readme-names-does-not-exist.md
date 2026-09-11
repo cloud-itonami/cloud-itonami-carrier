@@ -72,7 +72,7 @@ superproject の `scripts/maturity-loop/run.cljs` は「テストを壊して赤
 を確かめる道具で、この workspace が `axis-test` の gate として使っている。
 
 ```bash
-nbb scripts/maturity-loop/run.cljs --only cloud-itonami-carrier
+kbb --backend sci scripts/maturity-loop/run.cljk --only cloud-itonami-carrier
 # maturity-loop: 0 suite / policy maturity-loop/mutation/v1
 # maturity-loop: 噛む=0 噛まない=0 エラー=0 skip=0     ← exit 0
 ```
