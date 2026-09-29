@@ -33,7 +33,7 @@ git grep -l "2609011500" origin/main    # → 0 件
 
 sparse checkout の外に在るのではない —— `origin/main` の木全体に対して引いて
 0 件である（手元に無いことと存在しないことを混同しないための引き方。
-superproject CLAUDE.md「『無い』と結論する前に検索する」）。
+superproject AGENTS.md「『無い』と結論する前に検索する」）。
 
 **この repo について実在する superproject ADR は 1 本だけ**で、それは
 `90-docs/adr/2800010200-cloud-itonami-carrier-west-registration.edn`
@@ -79,7 +79,7 @@ kbb --backend sci scripts/maturity-loop/run.cljk --only cloud-itonami-carrier
 
 `mutations.edn` にこの repo の項目が 1 つも無いので、**「登録が無い」が
 「全部噛んだ」と同じ形（exit 0・噛まない=0）で返る。** superproject
-CLAUDE.md が繰り返し名指ししている形——*測れなかった検査が、測って問題が
+AGENTS.md が繰り返し名指ししている形——*測れなかった検査が、測って問題が
 無かった検査と同じ値を返す*——そのものである。
 
 **この緑をテストの品質の証拠として引用しない。**
